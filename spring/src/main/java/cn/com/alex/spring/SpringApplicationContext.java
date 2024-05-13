@@ -22,6 +22,7 @@ public class SpringApplicationContext {
             URL resource = classLoader.getResource(path);
             File file = new File(resource.getFile());
             scanFiles(file, classLoader);
+            System.out.println("tst");
         }
     }
 
