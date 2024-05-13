@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+    /* 设置 id 为 "myHeader" 的元素的样式 */
+    #myHeader {
+        background-color: lightblue;
+        color: black;
+        padding: 40px;
+        text-align: center;
+    }
+    #myHeader1 {
+        background-color: yellow;
+        color: black;
+        padding: 40px;
+        text-align: center;
+    }
+
+    /* 设置类名为 "city" 的所有元素的样式 */
+    .city {
+        background-color: tomato;
+        color: white;
+        padding: 10px;
+    }
+</style>
+<h2 id="C4">第四章</h2>
+<!-- 拥有唯一 id 的元素 -->
+<h1 id="myHeader">My Cities</h1>
+<h1 id="myHeader1">My Cities1</h1>
+
+<!-- 拥有相同类名的多个元素 -->
+<h2 class="city">London</h2>
+<p>London is the capital of England.</p><h2 class="city">London</h2>
+<p>London is the capital of England.</p><h2 class="city">London</h2>
+<p>London is the capital of England.</p><h2 class="city">London</h2>
+<p>London is the capital of England.</p><h2 class="city">London</h2>
+<p>London is the capital of England.</p><h2 class="city">London</h2>
+<p>London is the capital of England.</p>
+<a href="javascript:" onclick="displayResult();">wwww</a>
+<h2 class="city">Paris</h2>
+<p>Paris is the capital of France.</p>
+
+<h2 class="city">Tokyo</h2>
+<p>Tokyo is the capital of Japan.</p>
+<a href="#C4">跳转到第四章</a>
+<script>
+    function displayResult() {
+        document.getElementById("myHeader").innerHTML = "Have a nice day!";
+    }
+</script>

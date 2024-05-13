@@ -1,0 +1,8 @@
+# 项目排除路径
+/agency-model/target/
+/decorator-mode/target/
+/leetcode/target/
+/observer-model/target/
+/reactor/target/
+/spring/target/
+/thread-basic/target/

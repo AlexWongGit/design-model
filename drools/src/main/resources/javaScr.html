@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<h1>我的第一段 JavaScript</h1>
+
+<button type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+    点击我来显示日期和时间
+</button>
+<button type="button" onclick="document.getElementById('demo').innerHTML = 'Hello JavaScript!'">
+    点我换样式
+</button>
+
+<p id="demo">fff</p>
+
+</body>
+<script>
+    document.getElementById("demo").style.fontSize = "25px";
+    document.getElementById("demo").style.color = "gray";
+    document.getElementById("demo").style.backgroundColor = "yellow";
+
+</script>
+
+<noscript>抱歉，您的浏览器不支持 JavaScript！</noscript>
+</html>

@@ -1,0 +1,32 @@
+package rules
+
+import org.drools.core.spi.KnowledgeHelper;
+import org.alex.entity.IotDeviceThresholdInfoVo;
+
+rule "是否低于最小值"
+    when
+        $thresholdInfo: IotDeviceThresholdInfoVo(minValue != null && value < minValue)
+    then
+        $thresholdInfo.setResult("0");
+end
+
+rule "是否超过最大值"
+    when
+        $thresholdInfo: IotDeviceThresholdInfoVo(maxValue != null && value > maxValue)
+    then
+        $thresholdInfo.setResult("1");
+end
+
+rule "是否在阈值范围内1"
+    when
+        $thresholdInfo: IotDeviceThresholdInfoVo(value < maxValue && value > minValue && maxValue != null)
+    then
+        $thresholdInfo.setResult("2");
+end
+
+rule "是否在阈值范围内2"
+    when
+        $thresholdInfo: IotDeviceThresholdInfoVo(value < maxValue && value > minValue && minValue != null)
+    then
+        $thresholdInfo.setResult("2");
+end

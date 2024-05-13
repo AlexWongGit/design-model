@@ -1,0 +1,65 @@
+
+o
+java:S2293="YReplace the type specification in this constructor call with the diamond operator ("<>").(üÇ·æ
+o
+java:S2293>"YReplace the type specification in this constructor call with the diamond operator ("<>").(¸Î Ÿ
+†
+java:S1319C"dThe type of "list" should be an interface such as "List" rather than the implementation "ArrayList".(Ó¥¸Áşÿÿÿÿ8Æ”ÂÀá1
+C
+java:S1172	"(Remove this unused method parameter "x".(À¢Á¨ÿÿÿÿÿ
+]
+java:S1854,";Remove this useless assignment to local variable "listInt".(¾¬ı‡ûÿÿÿÿ8Ø”ÂÀá1
+X
+java:S1854+";Remove this useless assignment to local variable "listObj".(‰å û8Ú”ÂÀá1
+Z
+java:S1854*"8Remove this useless assignment to local variable "list".(©Øˆ‰şÿÿÿÿ8Û”ÂÀá1
+K
+java:S1854#"5Remove this useless assignment to local variable "c".(ü•Ì®
+P
+java:S1854"5Remove this useless assignment to local variable "a".(Ä¹óıÿÿÿÿ
+K
+java:S1854"5Remove this useless assignment to local variable "o".(ìõÌé
+K
+java:S1854"5Remove this useless assignment to local variable "f".(ûê‚
+K
+java:S1854"5Remove this useless assignment to local variable "i".(™Šø›
+<
+java:S1481"&Remove this unused "i" local variable.(™Šø›
+<
+java:S1481"&Remove this unused "f" local variable.(ûê‚
+<
+java:S1481"&Remove this unused "o" local variable.(ìõÌé
+A
+java:S1481"&Remove this unused "a" local variable.(Ä¹óıÿÿÿÿ
+<
+java:S1481#"&Remove this unused "c" local variable.(ü•Ì®
+E	java:S106&"+Replace this use of System.out by a logger.(Ü‘İÿÿÿÿÿÿ
+K
+java:S1481*")Remove this unused "list" local variable.(©Øˆ‰şÿÿÿÿ8÷”ÂÀá1
+I
+java:S1481+",Remove this unused "listObj" local variable.(‰å û8ù”ÂÀá1
+N
+java:S1481,",Remove this unused "listInt" local variable.(¾¬ı‡ûÿÿÿÿ8ü”ÂÀá1
+C
+java:S2129."!Remove this "Integer" constructor(©—Ÿõÿÿÿÿÿ8ÿ”ÂÀá1
+Q
+java:S1874."/Remove this use of "Integer"; it is deprecated.(©—Ÿõÿÿÿÿÿ8•ÂÀá1
+J
+java:S1874/"-Remove this use of "Float"; it is deprecated.(†½Š”8„•ÂÀá1
+G	java:S1068"+Replace this use of System.out by a logger.(±¢ôÉ8†•ÂÀá1
+W	java:S1251"<This block of commented-out lines of code should be removed.(Ô“Ê98ˆ•ÂÀá1
+X	java:S1253"<This block of commented-out lines of code should be removed.(æ¥•Â8‰•ÂÀá1
+Y
+java:S2133="CRemove this object instantiation and use "ArrayList.class" instead.(üÇ·æ
+Y
+java:S2133>"CRemove this object instantiation and use "ArrayList.class" instead.(¸Î Ÿ
+C
+java:S2129D"!Remove this "Integer" constructor(©èÂÌşÿÿÿÿ8’•ÂÀá1
+Q
+java:S1874D"/Remove this use of "Integer"; it is deprecated.(©èÂÌşÿÿÿÿ8“•ÂÀá1
+O
+java:S1874E"-Remove this use of "Float"; it is deprecated.(¦µ˜‡øÿÿÿÿ8••ÂÀá1
+X	java:S125H"<This block of commented-out lines of code should be removed.(®ş’‘8›•ÂÀá1
+G	java:S106O"+Replace this use of System.out by a logger.(Áªø8•ÂÀá1
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8 •ÂÀá1

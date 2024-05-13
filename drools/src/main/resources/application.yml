@@ -1,0 +1,27 @@
+server:
+  port: 67697
+spring:
+  # 服务名称
+  application:
+    name: design-model-drools
+    profiles:
+      active: dev
+  datasource:
+    driverClassName: com.mysql.cj.jdbc.Driver
+    username: root
+    password: 12345678
+    url: jdbc:mysql://127.0.0.1:3306/alex?characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=false&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=GMT%2B8&allowMultiQueries=true&allowPublicKeyRetrieval=true&autoReconnect=true
+    stat-view-servlet:
+      enabled: true
+      url-pattern: /druid/*
+      login-username: admin
+      login-password: admin
+    filter:
+      stat:
+        enabled: true
+        log-slow-sql: true
+        slow-sql-millis: 10000
+        merge-sql: false
+      wall:
+        config:
+          multi-statement-allow: true

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .cities {
+            background-color: black;
+            color: white;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="cities">
+    <h2>London</h2>
+    <p>
+        London is the capital city of England.
+        It is the most populous city in the United Kingdom,
+        with a metropolitan area of over 13 million inhabitants.
+    </p>
+</div>
+
+<div class="cities">
+    <h2>London</h2>
+    <p>London is the capital city of England.
+        It is the most populous city in the United Kingdom,
+        with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<div class="cities">
+    <h2>Paris</h2>
+    <p>Paris is the capital and most populous city of France.</p>
+</div>
+
+<div class="cities">
+    <h2>Tokyo</h2>
+    <p>Tokyo is the capital of Japan, the center of the Greater Tokyo Area,
+        and the most populous metropolitan area in the world.</p>
+</div>
+<div class="form-unit">${text('基础信息')}</div>
+
+<div class="col-xs-6">
+    <div class="form-group">
+        <label class="control-label col-sm-4" title="">
+            <span class="required hide">*</span> ${text('机具编号')}：<i class="fa icon-question hide"></i></label>
+        <div class="col-sm-8">
+            <#form:select path="equipmentType" readonly="true" dictType="farm_equipment_type" maxlength="2"
+            class="form-control"/>
+        </div>
+    </div>
+</div>
+<div class="col-xs-6">
+    <div class="form-group">
+        <label class="control-label col-sm-4" title="">
+            <span class="required hide">*</span> ${text('机具分类')}：<i class="fa icon-question hide"></i></label>
+        <div class="col-sm-8">
+            <#form:input path="equipmentName" readonly="true" maxlength="20" class="form-control"/>
+        </div>
+    </div>
+</div>
+<div class="col-xs-6">
+    <div class="form-group">
+        <label class="control-label col-sm-4" title="">
+            <span class="required hide">*</span> ${text('机具品目')}：<i class="fa icon-question hide"></i></label>
+        <div class="col-sm-8">
+            <#form:input path="enterpriseId" maxlength="64" class="form-control"/>
+        </div>
+    </div>
+</div>
+<div class="col-xs-6">
+    <div class="form-group">
+        <label class="control-label col-sm-4" title="">
+            <span class="required hide">*</span> ${text('机具型号')}：<i class="fa icon-question hide"></i></label>
+        <div class="col-sm-8">
+            <#form:select path="enterpriseId" readonly="true" items="${enterprises}" itemLabel="name" itemValue="id"
+            class="form-control"/>
+        </div>
+    </div>
+</div>
+<div class="col-xs-6">
+    <div class="form-group">
+        <label class="control-label col-sm-4" title="">
+            <span class="required hide">*</span> ${text('出厂编号')}：<i class="fa icon-question hide"></i></label>
+        <div class="col-sm-8">
+            <#form:input path="longitude" maxlength="20" readonly="true" class="form-control"/>
+        </div>
+    </div>
+</div>
+<div class="col-xs-6">
+    <div class="form-group">
+        <label class="control-label col-sm-4" title="">
+            <span class="required hide">*</span> ${text('所在乡镇（街道）')}：<i
+                class="fa icon-question hide"></i></label>
+        <div class="col-sm-8">
+            <#form:input path="latitude" maxlength="20" readonly="true" class="form-control"/>
+        </div>
+    </div>
+</div>
+<div class="col-xs-6">
+    <div class="form-group">
+        <label class="control-label col-sm-4" title="">
+            <span class="required hide">*</span> ${text('详细地址')}：<i class="fa icon-question hide"></i></label>
+        <div class="col-sm-8">
+            <#form:input path="equipmentCode" maxlength="30" readonly="true" class="form-control"/>
+        </div>
+    </div>
+</div>
+<div class="col-xs-6">
+    <div class="form-group">
+        <label class="control-label col-sm-4" title="">
+            <span class="required hide">*</span> ${text('机主名称')}：<i class="fa icon-question hide"></i></label>
+        <div class="col-sm-8">
+            <#form:input path="createByName" maxlength="30" readonly="true" class="form-control"/>
+        </div>
+    </div>
+</div>
+<div class="col-xs-6">
+    <div class="form-group">
+        <label class="control-label col-sm-4" title="">
+            <span class="required hide">*</span> ${text('统一社会信用代码')}：<i
+                class="fa icon-question hide"></i></label>
+        <div class="col-sm-8">
+            <#form:input path="createDate" maxlength="30" dataFormat="datetime" readonly="true"
+            class="form-control"/>
+        </div>
+    </div>
+</div>
+<div class="col-xs-6">
+    <div class="form-group">
+        <label class="control-label col-sm-4" title="">
+            <span class="required hide">*</span> ${text('生产企业名称')}：<i
+                class="fa icon-question hide"></i></label>
+        <div class="col-sm-8">
+            <#form:input path="createDate" maxlength="30" dataFormat="datetime" readonly="true"
+            class="form-control"/>
+        </div>
+    </div>
+</div>
+
+</body>
+<script>
+    $("#inputForm").validate({
+        submitHandler: function(form){
+            js.ajaxSubmitForm($(form), function(data){
+                js.showMessage(data.message);
+                if(data.result == Global.TRUE){
+                    js.closeCurrentTabPage(function(contentWindow){
+                        contentWindow.page();
+                    });
+                }
+            }, "json");
+        }
+    });
+</script>
+</html>
