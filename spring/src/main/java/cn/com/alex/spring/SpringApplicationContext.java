@@ -7,8 +7,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import java.io.File;
 import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -19,6 +22,8 @@ public class SpringApplicationContext {
 
     private Map<String, BeanDefinition> beanDefinitionMap = new ConcurrentHashMap<>();
     private Map<String,Object> singletonObjects = new HashMap<>();
+
+    private List<BeanPostProcessor> beanPostProcessorList = new LinkedList<>();
 
     public SpringApplicationContext(Class<?> clazz) throws Exception {
         this.clazz = clazz;
@@ -31,6 +36,8 @@ public class SpringApplicationContext {
             if ("singleton".equals(beanDefinition.getScope())) {
                 //创建bean并属性赋值
                 Object bean = createBean(beanName,beanDefinition);
+
+                //缓存单例池
                 singletonObjects.put(beanName,bean);
             }
         }
@@ -41,6 +48,7 @@ public class SpringApplicationContext {
         Object bean = null;
         bean = clazz.getConstructor().newInstance();
         Field[] fields = bean.getClass().getFields();
+        //依赖注入
         for (Field field : fields) {
             //属性赋值
             if (field.isAnnotationPresent(Autowired.class)) {
@@ -49,10 +57,24 @@ public class SpringApplicationContext {
             }
         }
 
+        //BeanPostProcessor
+        for (BeanPostProcessor beanPostProcessor : beanPostProcessorList) {
+            beanPostProcessor.postProcessBeforeInitialization(bean,beanName);
+        }
+
+
+        //InitializingBean
         if (bean instanceof InitializingBean) {
            ((InitializingBean) bean).afterPropertiesSet();
         }
 
+        //beanNameAware，beanFactoryAware,ApplicationContextAware
+
+
+        //BeanPostProcessor
+        for (BeanPostProcessor beanPostProcessor : beanPostProcessorList) {
+            beanPostProcessor.postProcessAfterInitialization(bean,beanName);
+        }
 
         return bean;
     }
@@ -91,6 +113,13 @@ public class SpringApplicationContext {
         try {
             Class<?> aClass = classLoader.loadClass(absolutePath);
             if (aClass.isAnnotationPresent(Component.class)) {
+
+                //如果实现了BeanPostProcessor
+                if (BeanPostProcessor.class.isAssignableFrom(aClass)) {
+                    BeanPostProcessor beanPostProcessor =(BeanPostProcessor) clazz.getConstructor().newInstance();
+                    beanPostProcessorList.add(beanPostProcessor);
+                }
+
                 BeanDefinition beanDefinition = new BeanDefinition();
                 Component annotation1 = aClass.getAnnotation(Component.class);
                 String beanName = annotation1.value();
@@ -106,6 +135,14 @@ public class SpringApplicationContext {
                 beanDefinitionMap.put(beanName, beanDefinition);
             }
         } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        } catch (InvocationTargetException e) {
+            throw new RuntimeException(e);
+        } catch (InstantiationException e) {
+            throw new RuntimeException(e);
+        } catch (IllegalAccessException e) {
+            throw new RuntimeException(e);
+        } catch (NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
     }
