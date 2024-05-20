@@ -4,6 +4,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.NoSuchBeanDefinitionException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.support.AbstractBeanDefinition;
+import org.springframework.beans.factory.support.BeanDefinitionBuilder;
 
 import java.io.File;
 import java.lang.reflect.Field;
@@ -69,7 +71,6 @@ public class SpringApplicationContext {
         }
 
         //beanNameAware，beanFactoryAware,ApplicationContextAware
-
 
         //BeanPostProcessor
         for (BeanPostProcessor beanPostProcessor : beanPostProcessorList) {
