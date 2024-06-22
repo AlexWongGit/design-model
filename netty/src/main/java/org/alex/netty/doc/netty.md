@@ -11,9 +11,12 @@
 ## 笔记
 ### ChannelHandlerMask里面定义了哪些是出站事件和入站事件。
 static final int MASK_ONLY_INBOUND =  MASK_CHANNEL_REGISTERED |
+
 MASK_CHANNEL_UNREGISTERED | MASK_CHANNEL_ACTIVE | MASK_CHANNEL_INACTIVE | MASK_CHANNEL_READ |
 MASK_CHANNEL_READ_COMPLETE | MASK_USER_EVENT_TRIGGERED | MASK_CHANNEL_WRITABILITY_CHANGED;
+
 private static final int MASK_ALL_INBOUND = MASK_EXCEPTION_CAUGHT | MASK_ONLY_INBOUND;
+
 static final int MASK_ONLY_OUTBOUND =  MASK_BIND | MASK_CONNECT | MASK_DISCONNECT |
 MASK_CLOSE | MASK_DEREGISTER | MASK_READ | MASK_WRITE | MASK_FLUSH;
 private static final int MASK_ALL_OUTBOUND = MASK_EXCEPTION_CAUGHT | MASK_ONLY_OUTBOUND;
@@ -30,3 +33,10 @@ private static final int MASK_ALL_OUTBOUND = MASK_EXCEPTION_CAUGHT | MASK_ONLY_O
 
 ### Channelhandler
 + 出站事件继承ChannelOutboundHandler，入站事件继承ChannelInboundHandler，实现需要用到的方法。
++ channelOutboundHandler.read()方法，是一个业务方（如网卡）要求一个读动作，也就是触发了订阅的op_read，netty将读这个"要求读动作"打包成一个入站事件，然后传入ChannelPipeline。
++ 对一个channel最多读16次，所以满16此次或者读不到数据了就停止发送上述事件。
++ 共享handler用注解 @ChannelHandler.Sharable。
+
+### buffer
++ netty会在pipeline里加一个head和tail上下文，在这两个上下文自动释放了buffer。
++ simpleChannelInboundHandler.channelRead()方法，将数据要不传递要不释放。自己实现也要注意，否则会造成内存泄露。![img_1.png](img_1.png)
