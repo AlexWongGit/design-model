@@ -9,7 +9,18 @@
 
 
 ## 笔记
-### ChannelHandlerMask里面定义了哪些是出站事件和入站事件。
+### netty核心组件
++ bootstrap:netty框架启动类主入口类；
++ eventLoop(group)P:事件循环处理的线程（组）eventLoopGroup中包含多个eventLoop，每个eventLoop对应一个线程；
++ channel:可以粗略的理解为socket；
++ channelHandler: 处理数据的核心组件；
++ channelPipeline:把channelHandler们组织在一起（责任链模式）；
++ byteBuffer: 缓冲区；
++ channelFuture: 出站操作异步获取结果。
+
+#### eventLoop和eventLoopGroup
+![img_2.png](img_2.png)
+#### ChannelHandlerMask里面定义了哪些是出站事件和入站事件。
 static final int MASK_ONLY_INBOUND =  MASK_CHANNEL_REGISTERED |
 
 MASK_CHANNEL_UNREGISTERED | MASK_CHANNEL_ACTIVE | MASK_CHANNEL_INACTIVE | MASK_CHANNEL_READ |
@@ -21,7 +32,7 @@ static final int MASK_ONLY_OUTBOUND =  MASK_BIND | MASK_CONNECT | MASK_DISCONNEC
 MASK_CLOSE | MASK_DEREGISTER | MASK_READ | MASK_WRITE | MASK_FLUSH;
 private static final int MASK_ALL_OUTBOUND = MASK_EXCEPTION_CAUGHT | MASK_ONLY_OUTBOUND;
 
-### ChannelPipeline和ChannelHandlerContext
+#### ChannelPipeline和ChannelHandlerContext
 + ChannelPipeline提供了ChannelHandler的注册和移除，ChannelHandlerContext提供了ChannelHandler的调用。
 + ChannelPipeline是一个双向链表，定义了用于在该链上出战和入站事件流的api，可以分辨出站和入站事件。
 + 出站事件和入站事件分属不同的handler，一般情况下在业务没有要求的情况下可以不考虑出站事件和入站事件之间的顺序。
@@ -31,12 +42,12 @@ private static final int MASK_ALL_OUTBOUND = MASK_EXCEPTION_CAUGHT | MASK_ONLY_O
 ![img.png](img.png)
 + fire开头的方法，会把事件从当前ChannelHandler开始，传递到下一个ChannelHandler。
 
-### Channelhandler
+#### Channelhandler
 + 出站事件继承ChannelOutboundHandler，入站事件继承ChannelInboundHandler，实现需要用到的方法。
 + channelOutboundHandler.read()方法，是一个业务方（如网卡）要求一个读动作，也就是触发了订阅的op_read，netty将读这个"要求读动作"打包成一个入站事件，然后传入ChannelPipeline。
 + 对一个channel最多读16次，所以满16此次或者读不到数据了就停止发送上述事件。
 + 共享handler用注解 @ChannelHandler.Sharable。
 
-### buffer
+#### buffer
 + netty会在pipeline里加一个head和tail上下文，在这两个上下文自动释放了buffer。
 + simpleChannelInboundHandler.channelRead()方法，将数据要不传递要不释放。自己实现也要注意，否则会造成内存泄露。![img_1.png](img_1.png)
