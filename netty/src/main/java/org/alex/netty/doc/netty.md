@@ -111,10 +111,38 @@ channelReadComplete()方法，是netty将buffer中的数据传递给ChannelInbou
 ### 编解码器
 编解码器是netty提供的一种处理数据的方式，它将数据从一种格式转换为另一种格式，以便于传输和存储。
 ![img_7.png](img_7.png)
-编码器：对象->MessageToMessageDecoder->json明文->ByteToMessageDecoder->密文
-解码器：密文->ByteToMessageDecoder->json明文->MessageToMessageDecoder->对象
++ 编码器：对象->MessageToMessageDecoder->json明文->ByteToMessageDecoder->密文
++ 解码器：密文->ByteToMessageDecoder->json明文->MessageToMessageDecoder->对象
++ 在 Netty 框架中，MessageToMessageDecoder、ByteToMessageDecoder 和 MessageToMessageEncoder 是用于处理数据编解码的重要组件，它们的作用和区别如下：
+  + ByteToMessageDecoder：ByteToMessageDecoder 是 Netty 中的一个抽象类，用于处理将字节数据解码为消息对象的操作。它继承自 ChannelInboundHandlerAdapter，可以通过覆盖 decode 方法实现具体的解码逻辑。
+作用：用于处理从网络中读取的字节数据，将其解码为应用程序能够理解的消息对象。
+方法：
+decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out)：实现数据的解码逻辑，将字节流解析为消息对象，并将解码后的消息添加到 out 列表中。 
+  + MessageToMessageDecoder：MessageToMessageDecoder 是 ChannelInboundHandlerAdapter 的一个子类，用于处理将一种消息对象解码为另一种消息对象的操作。
+作用：用于实现消息对象之间的转换或者处理，例如将一种类型的消息转换为另一种类型，或者对消息进行过滤、分割等操作。
+方法：
+decode(ChannelHandlerContext ctx, Object msg, List<Object> out)：实现消息对象之间的转换或处理逻辑，将输入的消息对象转换为输出的消息对象，并将结果添加到 out 列表中。 
+  + MessageToMessageEncoder：MessageToMessageEncoder 是 ChannelOutboundHandlerAdapter 的一个子类，用于将一种消息对象编码为另一种消息对象的操作。
+作用：用于实现消息对象的编码，将应用程序定义的消息对象转换为字节流或者其他类型的消息对象，以便发送到网络中。
+方法：
+encode(ChannelHandlerContext ctx, Object msg, List<Object> out)：实现将输入的消息对象编码为输出的消息对象或者字节流，并将结果添加到 out 列表中。
++ 区别总结：
+  ByteToMessageDecoder 主要用于处理从字节流到消息对象的解码。
+  MessageToMessageDecoder 主要用于处理消息对象到消息对象之间的转换。
+  MessageToMessageEncoder 主要用于处理消息对象到消息对象或字节流之间的编码。
+  这些编解码器在 Netty 中的使用可以帮助开发者简化数据处理逻辑，提高网络通信的效率和可靠性。通过组合不同的编解码器，可以灵活地处理复杂的数据转换需求
 
-ByteToMessageDecoder：将字节数组转换为消息对象。
-MessageToMessageDecoder：将消息对象转换为消息对象。
-ByteToMessageCodec：将字节数组转换为消息对象，并将消息对象转换为字节数组。
-MessageToMessageCodec：将消息对象转换为消息对象，并将消息对象转换为消息对象。
+
+#### 应用：
+![img_8.png](img_8.png)
++ ByteToMessageCodec 和 MessageToMessageCodec 是 Netty 框架中的两个编解码器接口，用于处理网络通信中的数据编码和解码操作。这两个接口是 ChannelOutboundHandler 和 ChannelInboundHandler 的扩展，这意味着它们可以处理入站（接收到的数据）和出站（发送的数据）事件。
+    + ByteToMessageCodec：这个接口主要用于将字节（byte）数据转换为消息（Message）对象。它通常用于处理原始的字节流数据，并将其转换为 Netty 消息对象。
+      它包括了 encode 方法和 decode 方法，分别用于将消息编码为字节和将字节解码为消息。
+      encode(ChannelHandlerContext ctx, Object msg, ByteBuf out) throws Exception：将对象消息编码为字节，写入到 ByteBuf 中。
+      decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception：将字节流解码为消息对象，并添加到 List 中。
+    + MessageToMessageCodec：
+      这个接口用于将消息对象转换为其他消息对象。它通常用于处理 Netty 消息对象之间的转换。
+      它也包括了 encode 方法和 decode 方法，但是这里的消息对象是 Object 类型，更加通用。
+      encode(ChannelHandlerContext ctx, Object msg, List<Object> out) throws Exception：将消息编码为其他消息对象，并添加到 List 中。
+      decode(ChannelHandlerContext ctx, Object msg, List<Object> out) throws Exception：将消息解码为另一个消息对象，并添加到 List 中。
+      使用编解码器可以简化网络通信中的数据处理，比如数据格式转换、数据压缩、序列化等操作。通过在 Netty 的 ChannelPipeline 中添加编解码器，你可以轻松地在不同的数据格式之间转换，而不需要关心底层的网络细节。
