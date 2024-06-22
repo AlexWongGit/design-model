@@ -146,3 +146,28 @@ encode(ChannelHandlerContext ctx, Object msg, List<Object> out)：实现将输�
       encode(ChannelHandlerContext ctx, Object msg, List<Object> out) throws Exception：将消息编码为其他消息对象，并添加到 List 中。
       decode(ChannelHandlerContext ctx, Object msg, List<Object> out) throws Exception：将消息解码为另一个消息对象，并添加到 List 中。
       使用编解码器可以简化网络通信中的数据处理，比如数据格式转换、数据压缩、序列化等操作。通过在 Netty 的 ChannelPipeline 中添加编解码器，你可以轻松地在不同的数据格式之间转换，而不需要关心底层的网络细节。
+![img_9.png](img_9.png)
+![img_11.png](img_11.png)
+![img_10.png](img_10.png)
+
+### 序列化机制
+序列化机制是网络通信中重要的一种技术，它用于将数据对象转换为字节流，以便在网络中传输。
+序列化机制可以提高网络通信的效率和可靠性，因为字节流可以直接在网络中传输，而不需要经过复杂的编码和解码过程。
+序列化的目的简单说就是将对象转换为字节流，以便在网络中传输，以及保存到磁盘上。
+![img_12.png](img_12.png)
+![img_13.png](img_13.png)
+![img_14.png](img_14.png)
+![img_21.png](img_21.png)
+#### 集成messagePack
+1.导入依赖
+![img_15.png](img_15.png)
+2.将需要序列化的类加入注解
+![img_16.png](img_16.png)
+3.编写messageback编码器
+![img_17.png](img_17.png)
+4.解决粘包半包问题
+![img_18.png](img_18.png)
+4.服务端
+![img_19.png](img_19.png)
+5.服务端解码器
+![img_20.png](img_20.png)
