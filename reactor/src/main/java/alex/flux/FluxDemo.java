@@ -1,6 +1,8 @@
 package alex.flux;
 
 import lombok.extern.slf4j.Slf4j;
+import org.reactivestreams.Publisher;
+import org.reactivestreams.Subscriber;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
@@ -14,6 +16,7 @@ public class FluxDemo {
         //fluxInDifferentThread();
         //fluxOnErrorReturn();
         getPalindromicNumber();
+
     }
 
     private static boolean getPalindromicNumber(){

@@ -1,0 +1,55 @@
+
+g
+java:S1192<"QDefine a constant instead of duplicating this literal "Subscribe {}: {}" 6 times.(ëË¡Ì
+o
+java:S1192>"TDefine a constant instead of duplicating this literal "Subscriber Complete" 6 times.(¨˜ßÑüÿÿÿÿ
+h
+java:S1192,"RDefine a constant instead of duplicating this literal "Request {} number" 6 times.(ÄõÏû
+k
+java:S11925"UDefine a constant instead of duplicating this literal "Publisher Complete 2" 6 times.(ä»‡ 
+k
+java:S1192-"UDefine a constant instead of duplicating this literal "Publisher Complete 1" 6 times.(„é›ü
+d
+java:S1192="IDefine a constant instead of duplicating this literal "error {}" 6 times.(–½¹Öøÿÿÿÿ
+d
+java:S1192"MDefine a constant instead of duplicating this literal "Exception {}" 3 times.(Î«æ‚
+e
+java:S11920"ODefine a constant instead of duplicating this literal "Publish {}, {}" 6 times.(ª¦«‰
+Œ
+java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú7
+Q	java:S125"<This block of commented-out lines of code should be removed.(èçú‰
+V	java:S1251"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ
+Q	java:S1257"<This block of commented-out lines of code should be removed.(îÒ«š
+J
+java:S1874Q"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ
+V	java:S125T"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ
+Q	java:S125Z"<This block of commented-out lines of code should be removed.(îÒ«š
+J
+java:S1874t"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ
+V	java:S125x"<This block of commented-out lines of code should be removed.(£ğåäşÿÿÿÿ
+Q	java:S125}"<This block of commented-out lines of code should be removed.(îÒ«š
+K
+java:S1874“"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ
+W	java:S125—"<This block of commented-out lines of code should be removed.(£ğåäşÿÿÿÿ
+K
+java:S1874±"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ
+W	java:S125¶"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ
+H
+java:S1874Á"1Remove this use of "subscribe"; it is deprecated.(ëË¡Ì
+K
+java:S1874Ò"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ
+W	java:S125Ö"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ
+H
+java:S1874á"1Remove this use of "subscribe"; it is deprecated.(ëË¡Ì
+K
+java:S1144*"5Remove this unused private "fluxInMainThread" method.(…¢ˆ¢
+P
+java:S1144M":Remove this unused private "fluxInDifferentThread" method.(µ‘ÇÆ
+Q
+java:S1144p"6Remove this unused private "fluxOnErrorReturn" method.(¢ÚËØşÿÿÿÿ
+R
+java:S1144"6Remove this unused private "fluxOnErrorResume" method.(áÄ÷òşÿÿÿÿ
+R
+java:S1144¯"6Remove this unused private "fluxWithSubscribe" method.(ÌÈ×Ûıÿÿÿÿ
+o
+java:S1144Ï"SRemove this unused private "fluxWithSubscribeAndChangePublishOnThreadOrder" method.(ê€ ­şÿÿÿÿ

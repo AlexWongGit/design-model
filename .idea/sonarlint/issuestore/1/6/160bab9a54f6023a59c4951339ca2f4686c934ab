@@ -1,0 +1,12 @@
+
+7
+java:S1643+"Use a StringBuilder instead.(º¤âÏüÿÿÿÿ
+C
+java:S5411E"(Use a primitive boolean expression here.(ıü‡Ìûÿÿÿÿ
+@	java:S106"+Replace this use of System.out by a logger.(¸“Ç™
+H
+java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ
+F
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ
+Z
+java:S11444"?Remove this unused private "getLongestCommonPrefixBest" method.(©ĞìÃøÿÿÿÿ
