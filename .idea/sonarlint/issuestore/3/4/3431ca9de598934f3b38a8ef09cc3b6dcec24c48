@@ -1,55 +1,55 @@
 
-g
-java:S1192<"QDefine a constant instead of duplicating this literal "Subscribe {}: {}" 6 times.(ëË¡Ì
+n
+java:S1192<"QDefine a constant instead of duplicating this literal "Subscribe {}: {}" 6 times.(ëË¡Ì8ˆÔÆı‚2
+v
+java:S1192>"TDefine a constant instead of duplicating this literal "Subscriber Complete" 6 times.(¨˜ßÑüÿÿÿÿ8ˆÔÆı‚2
 o
-java:S1192>"TDefine a constant instead of duplicating this literal "Subscriber Complete" 6 times.(¨˜ßÑüÿÿÿÿ
-h
-java:S1192,"RDefine a constant instead of duplicating this literal "Request {} number" 6 times.(ÄõÏû
+java:S1192,"RDefine a constant instead of duplicating this literal "Request {} number" 6 times.(ÄõÏû8‰ÔÆı‚2
+r
+java:S11925"UDefine a constant instead of duplicating this literal "Publisher Complete 2" 6 times.(ä»‡ 8‰ÔÆı‚2
+r
+java:S1192-"UDefine a constant instead of duplicating this literal "Publisher Complete 1" 6 times.(„é›ü8‰ÔÆı‚2
 k
-java:S11925"UDefine a constant instead of duplicating this literal "Publisher Complete 2" 6 times.(ä»‡ 
+java:S1192="IDefine a constant instead of duplicating this literal "error {}" 6 times.(–½¹Öøÿÿÿÿ8‰ÔÆı‚2
 k
-java:S1192-"UDefine a constant instead of duplicating this literal "Publisher Complete 1" 6 times.(„é›ü
-d
-java:S1192="IDefine a constant instead of duplicating this literal "error {}" 6 times.(–½¹Öøÿÿÿÿ
-d
-java:S1192"MDefine a constant instead of duplicating this literal "Exception {}" 3 times.(Î«æ‚
-e
-java:S11920"ODefine a constant instead of duplicating this literal "Publish {}, {}" 6 times.(ª¦«‰
-Œ
-java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú7
-Q	java:S125"<This block of commented-out lines of code should be removed.(èçú‰
-V	java:S1251"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ
-Q	java:S1257"<This block of commented-out lines of code should be removed.(îÒ«š
-J
-java:S1874Q"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ
-V	java:S125T"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ
-Q	java:S125Z"<This block of commented-out lines of code should be removed.(îÒ«š
-J
-java:S1874t"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ
-V	java:S125x"<This block of commented-out lines of code should be removed.(£ğåäşÿÿÿÿ
-Q	java:S125}"<This block of commented-out lines of code should be removed.(îÒ«š
-K
-java:S1874“"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ
-W	java:S125—"<This block of commented-out lines of code should be removed.(£ğåäşÿÿÿÿ
-K
-java:S1874±"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ
-W	java:S125¶"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ
-H
-java:S1874Á"1Remove this use of "subscribe"; it is deprecated.(ëË¡Ì
-K
-java:S1874Ò"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ
-W	java:S125Ö"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ
-H
-java:S1874á"1Remove this use of "subscribe"; it is deprecated.(ëË¡Ì
-K
-java:S1144*"5Remove this unused private "fluxInMainThread" method.(…¢ˆ¢
-P
-java:S1144M":Remove this unused private "fluxInDifferentThread" method.(µ‘ÇÆ
+java:S1192"MDefine a constant instead of duplicating this literal "Exception {}" 3 times.(Î«æ‚8‰ÔÆı‚2
+l
+java:S11920"ODefine a constant instead of duplicating this literal "Publish {}, {}" 6 times.(ª¦«‰8‰ÔÆı‚2
+“
+java:S1130"wRemove the declaration of thrown exception 'java.lang.InterruptedException', as it cannot be thrown from method's body.(º™Ú78–ÔÆı‚2
+X	java:S125"<This block of commented-out lines of code should be removed.(èçú‰8–ÔÆı‚2
+]	java:S1251"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ8˜ÔÆı‚2
+X	java:S1257"<This block of commented-out lines of code should be removed.(îÒ«š8˜ÔÆı‚2
 Q
-java:S1144p"6Remove this unused private "fluxOnErrorReturn" method.(¢ÚËØşÿÿÿÿ
+java:S1874Q"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ8™ÔÆı‚2
+]	java:S125T"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ8™ÔÆı‚2
+X	java:S125Z"<This block of commented-out lines of code should be removed.(îÒ«š8šÔÆı‚2
+Q
+java:S1874t"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ8›ÔÆı‚2
+]	java:S125x"<This block of commented-out lines of code should be removed.(£ğåäşÿÿÿÿ8›ÔÆı‚2
+X	java:S125}"<This block of commented-out lines of code should be removed.(îÒ«š8œÔÆı‚2
 R
-java:S1144"6Remove this unused private "fluxOnErrorResume" method.(áÄ÷òşÿÿÿÿ
+java:S1874“"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ8ÔÆı‚2
+^	java:S125—"<This block of commented-out lines of code should be removed.(£ğåäşÿÿÿÿ8ÔÆı‚2
 R
-java:S1144¯"6Remove this unused private "fluxWithSubscribe" method.(ÌÈ×Ûıÿÿÿÿ
-o
-java:S1144Ï"SRemove this unused private "fluxWithSubscribeAndChangePublishOnThreadOrder" method.(ê€ ­şÿÿÿÿ
+java:S1874±"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ8ŸÔÆı‚2
+^	java:S125¶"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ8 ÔÆı‚2
+O
+java:S1874Á"1Remove this use of "subscribe"; it is deprecated.(ëË¡Ì8 ÔÆı‚2
+R
+java:S1874Ò"/Remove this use of "elastic"; it is deprecated.(›úÿÿÿÿ8¡ÔÆı‚2
+^	java:S125Ö"<This block of commented-out lines of code should be removed.(©Ì¦›üÿÿÿÿ8¡ÔÆı‚2
+O
+java:S1874á"1Remove this use of "subscribe"; it is deprecated.(ëË¡Ì8¢ÔÆı‚2
+R
+java:S1144*"5Remove this unused private "fluxInMainThread" method.(…¢ˆ¢8¢ÔÆı‚2
+W
+java:S1144M":Remove this unused private "fluxInDifferentThread" method.(µ‘ÇÆ8¢ÔÆı‚2
+X
+java:S1144p"6Remove this unused private "fluxOnErrorReturn" method.(¢ÚËØşÿÿÿÿ8¢ÔÆı‚2
+Y
+java:S1144"6Remove this unused private "fluxOnErrorResume" method.(áÄ÷òşÿÿÿÿ8¢ÔÆı‚2
+Y
+java:S1144¯"6Remove this unused private "fluxWithSubscribe" method.(ÌÈ×Ûıÿÿÿÿ8£ÔÆı‚2
+v
+java:S1144Ï"SRemove this unused private "fluxWithSubscribeAndChangePublishOnThreadOrder" method.(ê€ ­şÿÿÿÿ8£ÔÆı‚2
