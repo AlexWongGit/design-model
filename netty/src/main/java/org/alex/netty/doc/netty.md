@@ -167,15 +167,15 @@ channelReadComplete()方法，是netty将buffer中的数据传递给ChannelInbou
 ![img_14.png](img_14.png)
 ![img_21.png](img_21.png)
 #### 集成messagePack
-1.导入依赖
+- 1.导入依赖
 ![img_15.png](img_15.png)
-2.将需要序列化的类加入注解
+- 2.将需要序列化的类加入注解
 ![img_16.png](img_16.png)
-3.编写messageback编码器
+- 3.编写messageback编码器
 ![img_17.png](img_17.png)
-4.解决粘包半包问题
+- 4.解决粘包半包问题
 ![img_18.png](img_18.png)
-4.服务端
+- 5.服务端
 ![img_19.png](img_19.png)
-5.服务端解码器
+- 6.服务端解码器
 ![img_20.png](img_20.png)
