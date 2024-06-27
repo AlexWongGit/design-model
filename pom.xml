@@ -17,6 +17,7 @@
         <module>reactor</module>
         <module>leetcode</module>
         <module>spring</module>
+        <module>newcode</module>
     </modules>
     <packaging>pom</packaging>
 

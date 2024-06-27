@@ -17,6 +17,7 @@
         <module name="drools" />
         <module name="factory-mode" />
         <module name="netty" />
+        <module name="newcode" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="8" />
