@@ -42,7 +42,9 @@ public class FiveKeykeyBoard {
                     select = false;
                     break;
                 case 5:
-                    select = true;
+                    if (curLength != 0) {
+                        select = true;
+                    }
                     break;
                 default:
             }
