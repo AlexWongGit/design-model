@@ -18,6 +18,7 @@
         <module>leetcode</module>
         <module>spring</module>
         <module>newcode</module>
+        <module>huawei</module>
     </modules>
     <packaging>pom</packaging>
 

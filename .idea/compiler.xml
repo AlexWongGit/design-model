@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="decorator-mode" />
         <module name="spring" />
+        <module name="huawei" />
         <module name="thread-basic" />
         <module name="observer-model" />
         <module name="reactor" />
