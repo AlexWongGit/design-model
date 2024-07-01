@@ -22,7 +22,7 @@ public class MqttClientListener implements ApplicationListener<ContextRefreshedE
                 MqttClientConnect mqttClientConnect = new MqttClientConnect();
                 mqttClientConnect.setMqttClientId("mqtt.client.id");
                 String host = "tcp://" + "url" + ":" + "1833";
-                mqttClientConnect.setInitTopic("");
+                mqttClientConnect.setInitTopic("thing/product/1/osd");
                 mqttClientConnect.setMqttClient(host,
                         "mqtt.client.id",
                         "alex_user",
