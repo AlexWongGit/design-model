@@ -24,12 +24,12 @@ public class MqttClientListener implements ApplicationListener<ContextRefreshedE
                 String host = "tcp://" + "url" + ":" + "1833";
                 mqttClientConnect.setInitTopic("thing/product/1/osd");
                 mqttClientConnect.setMqttClient(host,
-                        "mqtt.client.id",
+                        "mqttx_8f2cae71",
                         "alex_user",
                         "123456",
                         true,
-                        new MqttClientCallback("mqtt.client.id"));
-                MqttClientConnect.MQTT_CLIENTS.put("mqtt.client.id", mqttClientConnect);
+                        new MqttClientCallback("mqttx_8f2cae71"));
+                MqttClientConnect.MQTT_CLIENTS.put("mqttx_8f2cae71", mqttClientConnect);
             } catch (Exception e) {
                 log.error("初始化MQTT异常：{}",e.getMessage());
             }

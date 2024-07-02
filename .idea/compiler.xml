@@ -14,10 +14,11 @@
         <module name="leetcode" />
         <module name="factory-mode" />
         <module name="newcode" />
-        <module name="decorator-mode" />
         <module name="spring" />
+        <module name="decorator-mode" />
         <module name="huawei" />
         <module name="thread-basic" />
+        <module name="database" />
         <module name="agency-model" />
         <module name="netty" />
       </profile>

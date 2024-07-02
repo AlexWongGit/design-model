@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alex.mapper.ScoreMapper">
+
+    <select id="score" resultType="com.alex.entity.Score">
+        select * from score;
+    </select>
+</mapper>
