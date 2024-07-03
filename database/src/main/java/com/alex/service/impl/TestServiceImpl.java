@@ -9,6 +9,7 @@ import com.alex.service.TestService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
@@ -27,19 +28,22 @@ public class TestServiceImpl extends ServiceImpl<TestMapper, Test> implements Te
         return list.get(0).getName();
     }
 
+    /**
+     * @description 事务会失效
+     * @return void
+     * @param dto
+     */
     @Override
-    @Transactional(rollbackFor = Exception.class)
     public void insertTransaction(TestDto dto) {
         Test test = new Test();
         BeanUtils.copyProperties(dto,test);
-        error(dto);
-        save(test);
-        int i = 1 / 0;
+        error(test);
     }
 
-    private void error(TestDto dto) {
-        Score score = new Score();
-        score.setScore(dto.getScore());
-        scoreService.insertTransaction(score);
+
+    @Transactional(rollbackFor = Exception.class,propagation = Propagation.REQUIRES_NEW,readOnly = true)
+    public void error(Test test) {
+        save(test);
+        int i = 1 / 0;
     }
 }

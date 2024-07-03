@@ -30,6 +30,17 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>1.9.2</version>
+            </dependency>
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>1.9.2</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter</artifactId>
                 <exclusions>
@@ -183,6 +194,7 @@
                 <artifactId>redisson</artifactId>
                 <version>3.29.0</version>
             </dependency>
+
         </dependencies>
     </dependencyManagement>
     <properties>

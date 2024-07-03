@@ -12,8 +12,8 @@ public class ScoreServiceImpl extends ServiceImpl<ScoreMapper, Score> implements
 
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public void insertTransaction(Score score) {
         save(score);
-        //int i = 1 / 0;
     }
 }
