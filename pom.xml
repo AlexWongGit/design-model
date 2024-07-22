@@ -21,6 +21,7 @@
         <module>huawei</module>
         <module>test</module>
         <module>database</module>
+        <module>rmi</module>
     </modules>
     <packaging>pom</packaging>
 
