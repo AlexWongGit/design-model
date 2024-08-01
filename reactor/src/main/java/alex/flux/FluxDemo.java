@@ -7,6 +7,10 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 import reactor.core.scheduler.Schedulers;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
 @Slf4j
 public class FluxDemo {
 
@@ -15,7 +19,20 @@ public class FluxDemo {
         //fluxInMainThread();
         //fluxInDifferentThread();
         //fluxOnErrorReturn();
-        getPalindromicNumber();
+        //getPalindromicNumber();
+        // 创建Flux序列流的几种方式
+        Flux<String> just = Flux.just("hello", "world");
+        just.subscribe(System.out::println);
+        Flux<String> stringFlux = Flux.fromArray(new String[]{"你好", "世界"});
+        stringFlux.subscribe(System.out::println);
+        List<String> list = new ArrayList<>();
+        list.add("a");
+        list.add("b");
+        list.add("c");
+        Flux<Object> objectFlux = Flux.fromIterable(list);
+        objectFlux.subscribe(System.out::println);
+        Flux.range(1000,10)
+                .subscribe(System.out::println);
 
     }
 

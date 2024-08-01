@@ -19,6 +19,12 @@ public class MonoDemo {
 
         //操作mono
         operateMono();
+
+        Mono.just("hello")
+                .subscribe(System.out::println);
+        System.out.println("---------- 分割线1 ----------");
+        Mono.justOrEmpty(null)
+                .subscribe(System.out::println);
     }
 
     private static void createMono() {
