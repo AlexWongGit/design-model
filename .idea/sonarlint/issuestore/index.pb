@@ -223,3 +223,11 @@ Irmi/src/main/java/com/alex/rmi/controller/impl/PersonControllerImpl2.java,f/3/
 reactor/pom.xml,8/a/8a9ad17e17b0baa285c6513330396eb9baf07a7e
 ]
 -reactor/src/main/java/alex/mono/MonoDemo.java,5/e/5ed3cbbaaa83a409647642d60ce2992a5d2d7a12
+d
+4decorator-mode/src/main/java/org/alex/service/A.java,d/6/d62721232ab6ee68516c2898b846e4c4f2d39bb4
+[
++reactor/src/main/java/alex/ReactorDemo.java,3/a/3a4603dc2269a27569d5d4af2c1fe4b13f88284a
+d
+4decorator-mode/src/main/java/org/alex/service/B.java,c/2/c26eeb51210bdce27ec3e62a32821a95471ded2b
+d
+4decorator-mode/src/main/java/org/alex/service/C.java,5/8/586687f55faa90623ac2a08da6e43f77ec5cce2f

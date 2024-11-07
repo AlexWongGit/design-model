@@ -179,3 +179,9 @@ channelReadComplete()方法，是netty将buffer中的数据传递给ChannelInbou
 ![img_19.png](img_19.png)
 - 6.服务端解码器
 ![img_20.png](img_20.png)
+
+```json
+{
+  "这是一个json":"json"
+}
+```
