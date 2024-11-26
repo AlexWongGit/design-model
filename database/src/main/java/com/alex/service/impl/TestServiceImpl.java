@@ -1,7 +1,7 @@
 package com.alex.service.impl;
 
-import com.alex.entity.Score;
 import com.alex.entity.Test;
+import com.alex.entity.User;
 import com.alex.entity.dto.TestDto;
 import com.alex.mapper.TestMapper;
 import com.alex.service.ScoreService;
@@ -46,4 +46,5 @@ public class TestServiceImpl extends ServiceImpl<TestMapper, Test> implements Te
         save(test);
         int i = 1 / 0;
     }
+
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alex.mapper.UserMapper">
+
+
+    <insert id="save" parameterType="com.alex.entity.User">
+        insert into user(name,age,email,address,phone,password) values(#{name},#{age},#{email},#{address},#{phone},#{password})
+    </insert>
+
+    <update id="update" parameterType="com.alex.entity.User">
+        update user set name=#{name},age=#{age},email=#{email},address=#{address},phone=#{phone},password=#{password} where id=#{id}
+    </update>
+</mapper>
