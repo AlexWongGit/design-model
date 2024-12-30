@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 @RestController
 public class TestController {
@@ -33,6 +34,21 @@ public class TestController {
     {
         testService.insertTransaction(dto);
     }
+
+
+    @PostMapping("/abd")
+    public void abd(@RequestBody Map<String,Object> queryInfo)
+    {
+        System.out.println(queryInfo);
+    }
+
+    @PostMapping("/abd1")
+    public void abd(@RequestBody List<TestDto> dto)
+    {
+        System.out.println(dto);
+    }
+
+
 
 
 }

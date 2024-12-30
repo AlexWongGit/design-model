@@ -3,6 +3,7 @@ package com.alex.controller;
 import com.alex.entity.User;
 import com.alex.service.UserService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -10,6 +11,7 @@ import javax.annotation.Resource;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Slf4j
@@ -53,30 +55,32 @@ public class UserController {
 
 
     @PostMapping("/upload")
-    public String upload(@RequestPart("file") MultipartFile file) {
-
-        if (file.isEmpty()) {
-            return "文件为空，上传失败";
-        }
-
-        String fileName = file.getOriginalFilename();
-
-        String filePath = "/Users/logs/plm/" + fileName;
-
-        try {
-            File dest = new File(filePath);
-
-            if (!dest.getParentFile().exists()) {
-                dest.getParentFile().mkdirs();
+    public String upload(MultipartFile[] files) {
+        MultipartFile[] fileArray = files;
+        for (MultipartFile file : fileArray) {
+            if (file.isEmpty()) {
+                return "文件为空，上传失败";
             }
 
-            file.transferTo(dest);
+            String fileName = file.getOriginalFilename();
 
-            log.info("文件上传成功，路径: " + filePath);
-            return "上传成功";
-        } catch (IOException e) {
-            e.printStackTrace();
-            return "文件上传失败: " + e.getMessage();
+            String filePath = "/Users/wangzifeng/logs/plm/" + fileName;
+
+            try {
+                File dest = new File(filePath);
+
+                if (!dest.getParentFile().exists()) {
+                    dest.getParentFile().mkdirs();
+                }
+
+                file.transferTo(dest);
+
+                log.info("文件上传成功，路径: " + filePath);
+            } catch (IOException e) {
+                e.printStackTrace();
+                return "文件上传失败: " + e.getMessage();
+            }
         }
+        return "上传成功";
     }
 }

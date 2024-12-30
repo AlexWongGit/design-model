@@ -1,5 +1,7 @@
 package org.alex.config;
 
+import org.redisson.Redisson;
+import org.redisson.config.Config;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -8,7 +10,7 @@ import java.io.File;
 @Configuration
 public class RedissonConfig {
 
- /*   @Bean
+    @Bean
     public Redisson getRedisson() {
         // 1. Create config object
         Config config = new Config();
@@ -18,5 +20,5 @@ public class RedissonConfig {
 
 // or read config from file
         config = Config.fromYAML(new File("config-file.yaml"));
-    }*/
+    }
 }
