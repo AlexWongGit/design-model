@@ -24,6 +24,7 @@
         <module>rmi</module>
         <module>redis</module>
         <module>ticker</module>
+        <module>completion</module>
     </modules>
     <packaging>pom</packaging>
 

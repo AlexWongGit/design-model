@@ -27,13 +27,13 @@ public class MessageController {
     @Autowired
     private RedisService redisService;
 
-    @PostMapping("/publish")
-    public String publishMessage(@RequestParam String message, @RequestParam int count) {
+/*    @PostMapping("/test")
+    public void publishMessage() {
         for (int i = 0; i < count; i++) {
             redisPublisher.publish(message);
         }
         return "Message published: " + message;
-    }
+    }*/
 
     @PostMapping("/test")
     public void test() {
@@ -116,14 +116,20 @@ public class MessageController {
             }
             users.add(user);
         }
-        long start = System.currentTimeMillis();
         for (int i = 0; i < users.size(); i++) {
-            redisService.saveUser("user:"+i , users.get(i));
-            //redisService.saveUserString("user:"+i , users.get(i));
+            //redisService.saveUser("user:"+i ,users.get(i));
+            redisService.saveUserString("user:"+i , "sadasdasdasdasdas");
+        }
+        long start = System.currentTimeMillis();
+
+        for (int i = 0; i < 10000; i++) {
+            redisService.saveUser("user:"+(20000+i) , "sadasdasdasdasdas");
         }
         System.out.println("Time taken: " + (System.currentTimeMillis() - start));
-
-        User retrievedUser = redisService.getUser("user:1");
+        for (int i = 0; i < 10000; i++) {
+            Object retrievedUser = redisService.getString("user:"+(20000+i));
+            System.out.println(retrievedUser.toString());
+        }
         //System.out.println("user: " + retrievedUser);
     }
 
