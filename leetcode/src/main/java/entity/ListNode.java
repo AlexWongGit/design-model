@@ -1,8 +1,6 @@
 package entity;
 
-import lombok.Data;
 
-@Data
 public class ListNode {
     int val;
     ListNode next;
@@ -21,5 +19,17 @@ public class ListNode {
 
     public boolean hasNext(){
         return this.next != null;
+    }
+
+    public int getVal() {
+        return val;
+    }
+
+    public void setNext(ListNode next) {
+        this.next = next;
+    }
+
+    public ListNode getNext() {
+        return next;
     }
 }

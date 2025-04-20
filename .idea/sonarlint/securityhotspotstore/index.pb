@@ -311,3 +311,9 @@ j
 :redis/src/main/java/com/alex/publisher/RedisPublisher.java,e/b/eb47990ae9bceefa6d50b62d518637fb4785ac7d
 n
 >redis/src/main/java/com/alex/controller/MessageController.java,1/8/18af18b755773cfa5880da9cb9856f11e5c9683e
+B
+completion/pom.xml,8/6/86c3f663550d7187e3be2fe4f41a80c0a6545c90
+a
+1completion/src/main/java/com/alex/Completion.java,d/9/d9e54e4672fed327cd113b84212b6a54bc9a557a
+r
+Bdrools/src/main/java/org/alex/entity/IotDeviceThresholdInfoVo.java,b/4/b4c676d0b81d264609d0f5c260a255acdd874fe9

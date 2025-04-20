@@ -2,6 +2,7 @@ package org.alex.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
 
 /**
  * 具体被观察者
@@ -26,5 +27,9 @@ public class SubscriptionSubject implements Subject{
         for (Observer observer : weixinUserlist) {
             observer.update(message);
         }
+    }
+
+    public static void main(String[] args) {
+        System.out.println("fdfd$dffd$ff".replaceAll("\\$[^\\$]*\\$", Matcher.quoteReplacement("#")));
     }
 }
