@@ -335,3 +335,7 @@ V
 &newcode/src/main/java/simple/Sqrt.java,b/e/beef7de69813b962bab2e648d7513f435177601a
 U
 %newcode/src/main/java/simple/BST.java,5/7/570d9ecab004c286dad06188b1429a3c6cf85b53
+d
+4leetcode/src/main/java/simple/PalindromicNumber.java,7/d/7df70cabde5e1e1bc646e18e46e8fb129e5fcfed
+c
+3leetcode/src/main/java/medium/RemoveDuplicates.java,d/5/d50ad8f24096f1e78eaf48350a45ab457cd2c7e4
