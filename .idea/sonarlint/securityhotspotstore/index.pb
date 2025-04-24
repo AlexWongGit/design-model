@@ -327,3 +327,11 @@ d
 4leetcode/src/main/java/medium/LongestPalindrome.java,9/0/90cfa84ed6c46318760870f8af02344fa24cb4b7
 Z
 *leetcode/src/main/java/medium/MaxArea.java,9/e/9ea68f031d14f17e5f28ed6a532db266be6f8344
+`
+0leetcode/src/main/java/simple/RemoveElement.java,6/b/6b36984732054f2c04c5a5fb28ea539d847da4ff
+Z
+*leetcode/src/main/java/medium/TreeSum.java,d/7/d785a163fccd3e61fa088885d35ec4460dfba56b
+V
+&newcode/src/main/java/simple/Sqrt.java,b/e/beef7de69813b962bab2e648d7513f435177601a
+U
+%newcode/src/main/java/simple/BST.java,5/7/570d9ecab004c286dad06188b1429a3c6cf85b53
